@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linet Joseph | Founder & Business Visionary Behind Eidalux</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@0.260.0"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-background"></div>
+    
+    <main class="vcard-container">
+        
+        <!-- LEFT COLUMN: Profile Card & Perfect Referral -->
+        <aside class="vcard-sidebar">
+            <div class="card profile-card gs-reveal">
+                <div class="profile-banner">
+                    <div class="banner-slider">
+                        <img src="images/banner_eidalux.jpg" alt="Eidalux Luxury Bedroom & Mattress" class="slide active">
+                        <img src="images/mattress1.webp" alt="Eidalux Mattress Collection" class="slide">
+                        <img src="images/mattress3.webp" alt="Eidalux Sleep System" class="slide">
+                    </div>
+                    <!-- Brand Logo -->
+                    <div class="brand-logo-badge">
+                        <img src="images/red png.png" alt="Eidalux Logo" class="brand-logo-img">
+                    </div>
+                </div>
+                
+                <div class="profile-avatar">
+                    <img src="images/myphoto.webp" alt="Linet Joseph" class="avatar-img">
+                </div>
+                
+                <div class="profile-info">
+                    <h1 class="profile-name">
+                        <span class="text-gradient">Linet Joseph</span> 
+                        <i data-lucide="check-circle" class="verified-icon"></i>
+                    </h1>
+                    
+                    <div class="creative-role-block">
+                        <div class="primary-role-red">
+                            <i data-lucide="crown"></i> Mattress Industry Leader
+                        </div>
+                        <div class="company-role-text">
+                            <span class="ceo-badge"><i data-lucide="sparkles"></i> Founder & Visionary</span> 
+                            <span class="at-text">behind</span> 
+                            <strong class="company-highlight"><i data-lucide="moon"></i> Eidalux</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="bni-chapter-badge">
+                        <i data-lucide="award"></i> Kerala Entrepreneur & Visionary
+                    </div>
+                </div>
+                
+                <div class="profile-about-premium">
+                    <div class="about-premium-header">
+                        <i data-lucide="user-check"></i>
+                        <h3>ABOUT LINET JOSEPH</h3>
+                    </div>
+                    <p>Linet Joseph is a Kerala entrepreneur whose journey reflects determination, adaptability, and a strong focus on quality and customer experience. Moving from media to manufacturing with ASACO and pioneering Eidalux, she crafts a story of comfort and better sleep.</p>
+                    <div class="profile-motto-pill">
+                        <i data-lucide="quote"></i>
+                        <span>“Better sleep. Better comfort. Better living.”</span>
+                    </div>
+                    
+                    <!-- Biography & Entrepreneurial Journey Trigger Button -->
+                    <button class="btn btn-bio-journey w-full" id="btn-open-bio-journey" type="button">
+                        <div class="btn-bio-inner">
+                            <div class="btn-bio-icon">
+                                <i data-lucide="book-open"></i>
+                            </div>
+                            <div class="btn-bio-text">
+                                <strong class="btn-bio-title">BIOGRAPHY & ENTREPRENEURIAL JOURNEY</strong>
+                                <span class="btn-bio-sub">Read full story, milestones & vision</span>
+                            </div>
+                            <i data-lucide="arrow-right" class="btn-bio-arrow"></i>
+                        </div>
+                    </button>
+                </div>
+                
+                <button class="btn btn-primary w-full" id="btn-whatsapp-connect">
+                    <i data-lucide="message-circle"></i> Connect on WhatsApp
+                </button>
+                <div class="profile-btn-row">
+                    <button class="btn btn-outline w-full" id="btn-email-me">
+                        <i data-lucide="mail"></i> Email Me
+                    </button>
+                    <button class="btn btn-black w-full" id="btn-play-intro">
+                        <i data-lucide="volume-2"></i> Play AI Intro
+                    </button>
+                </div>
+            </div>
+
+            <!-- Perfect Referral -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3>MY PERFECT REFERRAL</h3>
+                </div>
+                <div class="perfect-referral-box" id="perfectReferralBox">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- CENTER COLUMN: Content & Links -->
+        <section class="vcard-main">
+            
+            <!-- Contact & Links Grid -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3>CONTACT & DIRECT CONNECT</h3>
+                </div>
+                <div class="links-grid" id="linksGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Listen For These Words -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3>LISTEN FOR THESE WORDS</h3>
+                </div>
+                <div class="listen-chips" id="listenChips">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Ideal Customer -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3>MY IDEAL CLIENTS & PARTNERS</h3>
+                </div>
+                <div class="ideal-customer-list" id="idealCustomerGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Who Can Refer Me -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3>WHO CAN REFER ME (CONNECTORS)</h3>
+                </div>
+                <div class="connectors-list" id="connectorsGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- RIGHT COLUMN: Quick Actions & Highlights -->
+        <aside class="vcard-right">
+            
+            <!-- Quick Actions -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3 class="text-sm">QUICK ACTIONS</h3>
+                </div>
+                <div class="action-stack">
+                    <button class="btn btn-referral-slip" id="btn-open-referral-slip">
+                        <div class="referral-btn-content">
+                            <div class="referral-btn-icon-wrap">
+                                <i data-lucide="heart-handshake"></i>
+                            </div>
+                            <div class="referral-btn-info">
+                                <div class="referral-btn-badge-row">
+                                    <span class="referral-btn-badge">EIDALUX CONNECT</span>
+                                    <span class="referral-btn-subbadge-white">BUSINESS LEAD</span>
+                                </div>
+                                <strong class="referral-btn-title">Pass Business Referral Slip</strong>
+                                <span class="referral-btn-sub">Official Member Referral & Lead Slip</span>
+                            </div>
+                            <div class="referral-btn-arrow">
+                                <i data-lucide="arrow-right"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="btn btn-action" id="btn-view-services">
+                        <i data-lucide="layers"></i> View Eidalux Collections
+                    </button>
+                    <button class="btn btn-action" id="btn-save-contact">
+                        <i data-lucide="user-plus"></i> Save Contact (vCard)
+                    </button>
+                    <button class="btn btn-action" id="btn-share-profile">
+                        <i data-lucide="share-2"></i> Share Digital Profile
+                    </button>
+                    <button class="btn btn-black w-full" id="btn-show-qr" style="margin-bottom: 0.75rem;">
+                        <i data-lucide="qr-code"></i> Show Profile QR Code
+                    </button>
+                    <button class="btn btn-action" id="btnRefer">
+                        <i data-lucide="users"></i> Refer a Client / Partner
+                    </button>
+                    <a href="https://www.eidalux.com" target="_blank" class="btn btn-action">
+                        <i data-lucide="globe"></i> Visit Eidalux Website
+                    </a>
+                </div>
+            </div>
+
+            <!-- Business Highlights -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3 class="text-sm">BUSINESS HIGHLIGHTS</h3>
+                </div>
+                <div class="action-stack">
+                    <button class="btn btn-action" id="btn-testimonials">
+                        <i data-lucide="star"></i> Client & Partner Reviews
+                    </button>
+                    <button class="btn btn-action" id="btn-portfolio">
+                        <i data-lucide="image"></i> Mattress Showcase Gallery
+                    </button>
+                    <button class="btn btn-action" id="btn-video">
+                        <i data-lucide="play-circle"></i> Watch Brand Story
+                    </button>
+                    <button class="btn btn-action" id="btn-stats">
+                        <i data-lucide="bar-chart-2"></i> Business Milestones & Stats
+                    </button>
+                </div>
+            </div>
+
+            <!-- How to Introduce Me -->
+            <div class="card gs-reveal">
+                <div class="card-header">
+                    <h3 class="text-sm">HOW TO INTRODUCE ME</h3>
+                </div>
+                <div class="intro-box">
+                    <p id="introText" class="text-sm">“Meet Linet Joseph, Founder & Business Visionary behind Eidalux Mattress. She is a mattress industry leader from Kerala crafting premium, ergonomically designed sleep solutions and luxury orthopedic mattresses that deliver better sleep, comfort, and living.”</p>
+                    <div class="intro-actions mt-3">
+                        <button class="btn btn-outline btn-sm w-full mb-2" id="btnCopyIntro">
+                            <i data-lucide="copy"></i> Copy Intro
+                        </button>
+                        <button class="btn btn-primary btn-sm w-full" id="btnWaIntro">
+                            <i data-lucide="send"></i> WhatsApp Intro
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Eidalux Footer -->
+    <footer class="bni-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <div class="footer-icon">
+                    <i data-lucide="phone-call"></i>
+                </div>
+                <div class="footer-text">
+                    <span class="footer-sub">For enquiries & sleep consultations:</span>
+                    <strong class="footer-phone" id="footerPhone">+91 94470 12345</strong>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="footer-brand-row">
+                    <div class="footer-logo-pill">
+                        <img src="images/red png.png" alt="Eidalux" class="footer-brand-logo">
+                    </div>
+                </div>
+                <p>&copy; <span id="currentYear"></span> Eidalux Mattress. All rights reserved. | Founded by Linet Joseph</p>
+                <span class="footer-motto">“Better sleep. Better comfort. Better living.”</span>
+            </div>
+        </div>
+        <div class="footer-accent"></div>
+    </footer>
+
+    <!-- Referral Slip Modal -->
+    <div class="modal-overlay" id="referralSlipModal" data-lenis-prevent>
+        <div class="modal-container referral-slip-container" data-lenis-prevent>
+            <div class="modal-header referral-slip-header">
+                <div class="modal-title">
+                    <div class="slip-badge-icon">
+                        <i data-lucide="heart-handshake"></i>
+                    </div>
+                    <div>
+                        <div class="slip-header-title-row">
+                            <h2>Business Referral Slip</h2>
+                            <span class="official-verified-pill"><i data-lucide="shield-check"></i> Verified Member</span>
+                        </div>
+                        <span class="slip-header-sub">Member Referral • Linet Joseph (Founder & Visionary, Eidalux Mattress)</span>
+                    </div>
+                </div>
+                <button class="modal-close" id="closeReferralSlipBtn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body referral-slip-body">
+                <form id="referralSlipForm" onsubmit="return false;">
+                    
+                    <!-- Header Strip -->
+                    <div class="slip-ticket-banner">
+                        <div class="slip-ticket-pill">
+                            <span class="bni-dot-pulse"></span>
+                            <strong>EIDALUX BUSINESS REFERRAL</strong>
+                        </div>
+                        <div class="slip-givers-gain">
+                            <i data-lucide="award"></i> Premium Quality & Trust
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Referrer Info -->
+                    <div class="form-section">
+                        <div class="form-section-head">
+                            <span class="section-step-num">1</span>
+                            <label class="form-label mb-0">
+                                <i data-lucide="user-check"></i> REFERRED BY (YOUR DETAILS)
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group input-with-icon">
+                                <i data-lucide="user" class="field-icon"></i>
+                                <input type="text" id="refFrom" class="form-input" placeholder="Your Name *" required>
+                            </div>
+                            <div class="form-group input-with-icon">
+                                <i data-lucide="building" class="field-icon"></i>
+                                <input type="text" id="refChapter" class="form-input" placeholder="Organization / Chapter Name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Client Info -->
+                    <div class="form-section">
+                        <div class="form-section-head">
+                            <span class="section-step-num">2</span>
+                            <label class="form-label mb-0">
+                                <i data-lucide="building"></i> REFERRAL DETAILS (CLIENT / PROSPECT)
+                            </label>
+                        </div>
+                        <div class="form-group input-with-icon" style="margin-bottom: 0.65rem;">
+                            <i data-lucide="briefcase" class="field-icon"></i>
+                            <input type="text" id="refClientName" class="form-input" placeholder="Client Name / Organization *" required>
+                        </div>
+                        <div class="form-group input-with-icon">
+                            <i data-lucide="phone" class="field-icon"></i>
+                            <input type="tel" id="refClientPhone" class="form-input" placeholder="Client Phone / WhatsApp Number *" required>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Sleep Requirements -->
+                    <div class="form-section">
+                        <div class="form-section-head">
+                            <span class="section-step-num">3</span>
+                            <label class="form-label mb-0">
+                                <i data-lucide="layers"></i> SLEEP SOLUTION / PRODUCT REQUIREMENT
+                            </label>
+                        </div>
+                        <div class="ref-service-chips" id="refServiceChips">
+                            <button type="button" class="ref-chip active" data-service="Premium Hybrid Mattress">
+                                <i data-lucide="layers"></i> <span>Premium Hybrid</span>
+                            </button>
+                            <button type="button" class="ref-chip" data-service="Orthopedic Spine Care">
+                                <i data-lucide="activity"></i> <span>Ortho Spine Care</span>
+                            </button>
+                            <button type="button" class="ref-chip" data-service="100% Natural Latex">
+                                <i data-lucide="sparkles"></i> <span>Natural Latex</span>
+                            </button>
+                            <button type="button" class="ref-chip" data-service="Custom Sized Mattress">
+                                <i data-lucide="maximize-2"></i> <span>Custom Sizing</span>
+                            </button>
+                            <button type="button" class="ref-chip" data-service="Hotel & Resort Bulk Order">
+                                <i data-lucide="hotel"></i> <span>Resort / Hotel Bulk</span>
+                            </button>
+                            <button type="button" class="ref-chip" data-service="Ergonomic Pillows & Accessories">
+                                <i data-lucide="feather"></i> <span>Pillows & Linen</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Urgency / Connection Status -->
+                    <div class="form-section">
+                        <div class="form-section-head">
+                            <span class="section-step-num">4</span>
+                            <label class="form-label mb-0">
+                                <i data-lucide="activity"></i> REFERRAL STATUS (HOTNESS)
+                            </label>
+                        </div>
+                        <div class="ref-temp-cards">
+                            <label class="temp-card active">
+                                <input type="radio" name="refTemp" value="🔥 Hot (Told them you would call, immediate requirement)" checked>
+                                <div class="temp-icon-badge hot">
+                                    <i data-lucide="phone-forwarded"></i>
+                                </div>
+                                <span class="temp-badge hot">Told To Call</span>
+                                <span class="temp-desc">Expects immediate call</span>
+                            </label>
+                            <label class="temp-card">
+                                <input type="radio" name="refTemp" value="⚡ Warm (Given your card, interested in proposal)">
+                                <div class="temp-icon-badge warm">
+                                    <i data-lucide="credit-card"></i>
+                                </div>
+                                <span class="temp-badge warm">Given Card</span>
+                                <span class="temp-desc">Needs catalog & quote</span>
+                            </label>
+                            <label class="temp-card">
+                                <input type="radio" name="refTemp" value="🤝 General (Shared contact, friendly intro)">
+                                <div class="temp-icon-badge info">
+                                    <i data-lucide="user-plus"></i>
+                                </div>
+                                <span class="temp-badge info">General Intro</span>
+                                <span class="temp-desc">Initial connection made</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Remarks / Notes -->
+                    <div class="form-section">
+                        <div class="form-section-head">
+                            <span class="section-step-num">5</span>
+                            <label class="form-label mb-0">
+                                <i data-lucide="file-text"></i> SPECIAL NOTES / SPECIFICATIONS (OPTIONAL)
+                            </label>
+                        </div>
+                        <div class="input-with-icon textarea-icon-wrap">
+                            <i data-lucide="message-square" class="field-icon textarea-icon"></i>
+                            <textarea id="refNotes" class="form-textarea" rows="2" placeholder="e.g. Furnishing 4-bedroom villa, looking for King size orthopedic & latex mattresses..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Live Summary Preview Ticker -->
+                    <div class="slip-live-preview-box" id="slipLivePreview">
+                        <div class="live-preview-icon">
+                            <i data-lucide="clipboard-check"></i>
+                        </div>
+                        <div class="live-preview-content">
+                            <span class="live-preview-label">REFERRAL SLIP SUMMARY</span>
+                            <p class="live-preview-text" id="livePreviewSummary">
+                                Lead for <strong>Premium Hybrid Mattress</strong> • Status: <span class="text-hot">Told To Call</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="slip-submit-actions">
+                        <button type="button" class="btn btn-whatsapp-slip w-full" id="btnSubmitReferralSlip">
+                            <div class="btn-wa-inner">
+                                <i data-lucide="send" class="btn-send-icon"></i>
+                                <span>Submit Referral Slip via WhatsApp</span>
+                            </div>
+                        </button>
+                        <button type="button" class="btn btn-outline-slip w-full" id="btnCopyReferralSlip">
+                            <i data-lucide="copy"></i>
+                            <span>Copy Referral Slip Text</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- BIOGRAPHY & ENTREPRENEURIAL JOURNEY MODAL -->
+    <div class="modal-overlay" id="bioJourneyModal" data-lenis-prevent>
+        <div class="modal-container bio-journey-modal-container" data-lenis-prevent>
+            <div class="modal-header bio-journey-header">
+                <div class="modal-title">
+                    <div class="bio-journey-icon-wrap">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <div>
+                        <h2>Biography & Journey</h2>
+                        <span class="bio-journey-sub">Linet Joseph • Founder & Visionary Behind Eidalux</span>
+                    </div>
+                </div>
+                <button class="modal-close" id="closeBioJourneyBtn" aria-label="Close Modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body bio-journey-body">
+                
+                <!-- Quote Hero Callout -->
+                <div class="bio-quote-hero">
+                    <i data-lucide="quote" class="quote-icon"></i>
+                    <p>“From communicating stories in the media to creating a story of comfort through Eidalux.”</p>
+                </div>
+
+                <!-- Full Overview -->
+                <div class="bio-overview-box">
+                    <p>
+                        <strong>Linet Joseph</strong> is a Kerala entrepreneur whose journey reflects determination, adaptability, and a strong focus on quality and customer experience. Moving from media to manufacturing with ASACO and pioneering Eidalux, her visionary approach bridges communication, craftsmanship, and sleep health.
+                    </p>
+                </div>
+
+                <!-- Journey Milestones Timeline -->
+                <div class="journey-milestones">
+                    
+                    <!-- Milestone 1 -->
+                    <div class="milestone-item">
+                        <div class="milestone-bullet">
+                            <i data-lucide="newspaper"></i>
+                        </div>
+                        <div class="milestone-body">
+                            <span class="milestone-tag">Foundation</span>
+                            <h4 class="milestone-title">From Media Sector to Entrepreneurship</h4>
+                            <p class="milestone-desc">
+                                Her professional career began in the media sector, including her association with <strong>Deepika Daily</strong>, where she developed valuable experience in communication, marketing, and understanding consumer needs. This experience later became an important foundation for her entrepreneurial journey.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="milestone-item">
+                        <div class="milestone-bullet">
+                            <i data-lucide="factory"></i>
+                        </div>
+                        <div class="milestone-body">
+                            <span class="milestone-tag">Manufacturing</span>
+                            <h4 class="milestone-title">From Media to Mattress Manufacturing</h4>
+                            <p class="milestone-desc">
+                                Linet entered the mattress industry through <strong>ASACO Mattress</strong>, becoming deeply involved in manufacturing, marketing, and business development. Her vision went beyond simply producing mattresses—she focused on comfort, quality, support, and better sleep. Her customer-centric approach established the foundation for the next stage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="milestone-item">
+                        <div class="milestone-bullet">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <div class="milestone-body">
+                            <span class="milestone-tag">Brand Evolution</span>
+                            <h4 class="milestone-title">The Eidalux Journey</h4>
+                            <p class="milestone-desc">
+                                <strong>Eidalux Mattress</strong> represents the evolution of Linet Joseph's vision into a premium sleep brand. Eidalux focuses on craftsmanship, quality materials, technology, comfort, and better sleep, offering products designed for different comfort and support requirements. It reflects the evolution from a mattress manufacturing business towards a distinctive premium sleep and comfort brand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="milestone-item">
+                        <div class="milestone-bullet">
+                            <i data-lucide="compass"></i>
+                        </div>
+                        <div class="milestone-body">
+                            <span class="milestone-tag">Philosophy</span>
+                            <h4 class="milestone-title">Leadership & Entrepreneurial Philosophy</h4>
+                            <p class="milestone-desc">
+                                Linet's entrepreneurial philosophy is built around communication, courage, perseverance, innovation, and customer focus. Her journey demonstrates her willingness to embrace new challenges and build a business around customer needs. She also participates in entrepreneurship programmes, sharing the importance of creativity, perseverance, and risk-taking with students and young entrepreneurs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 5 -->
+                    <div class="milestone-item">
+                        <div class="milestone-bullet">
+                            <i data-lucide="moon"></i>
+                        </div>
+                        <div class="milestone-body">
+                            <span class="milestone-tag">Vision</span>
+                            <h4 class="milestone-title">Vision for Eidalux & Sleep Wellness</h4>
+                            <p class="milestone-desc">
+                                For Linet, a mattress is more than a household product—it is an investment in comfort, quality, and better sleep. Continuous evolution from early media experience to ASACO and Eidalux reflects a resolute vision to build a trusted premium sleep brand from Kerala.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Motto Strip -->
+                <div class="motto-banner-strip">
+                    <div class="motto-text-wrap">
+                        <span class="motto-label">BRAND CORE MOTTO</span>
+                        <strong class="motto-text">“Better sleep. Better comfort. Better living.”</strong>
+                    </div>
+                    <span class="motto-pill">Eidalux Promise</span>
+                </div>
+
+                <!-- Modal Action Row -->
+                <div class="bio-modal-actions">
+                    <button class="btn btn-primary w-full" onclick="openWhatsApp('Hi Linet Joseph, I read your inspiring journey and would like to connect.')">
+                        <i data-lucide="message-circle"></i> Connect on WhatsApp
+                    </button>
+                    <button class="btn btn-outline w-full" onclick="shareProfile()">
+                        <i data-lucide="share-2"></i> Share Profile
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Eidalux Collections Modal -->
+    <div class="modal-overlay" id="servicesModal" data-lenis-prevent>
+        <div class="modal-container" data-lenis-prevent>
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="layers" style="color: var(--clr-primary);"></i>
+                    <h2>Eidalux Mattress Collections</h2>
+                </div>
+                <button class="modal-close" id="closeModalBtn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalServicesList" data-lenis-prevent>
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div class="modal-overlay" id="qrModal" data-lenis-prevent>
+        <div class="modal-container" style="max-width: 400px; text-align: center;" data-lenis-prevent>
+            <div class="modal-header" style="border: none; padding-bottom: 0;">
+                <h2 style="font-size: 1.25rem;">Scan to Connect</h2>
+                <button class="modal-close" id="closeQrBtn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body" style="align-items: center; padding-top: 0;" data-lenis-prevent>
+                <p style="color: var(--clr-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                    Scan this QR code with your smartphone camera to instantly open Linet Joseph's digital profile.
+                </p>
+                <div style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: inline-block;">
+                    <img id="qrCodeImg" src="" alt="QR Code" style="width: 250px; height: 250px;">
+                </div>
+                <button class="btn btn-primary w-full mt-3" id="btn-share-qr">
+                    <i data-lucide="share"></i> Share QR Code
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Modal -->
+    <div class="modal-overlay" id="testimonialsModal" data-lenis-prevent>
+        <div class="modal-container" data-lenis-prevent>
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="star" style="color: var(--clr-primary);"></i>
+                    <h2>Client & Partner Reviews</h2>
+                </div>
+                <button class="modal-close" id="closeTestimonialsBtn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body" id="modalTestimonialsList" data-lenis-prevent>
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div class="modal-overlay" id="portfolioModal" data-lenis-prevent>
+        <div class="modal-container portfolio-modal-container" data-lenis-prevent>
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="image" style="color: var(--clr-primary);"></i>
+                    <h2>Mattress Showcase Gallery</h2>
+                </div>
+                <button class="modal-close" id="closePortfolioBtn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body portfolio-modal-body" data-lenis-prevent>
+                <div class="portfolio-grid" id="modalPortfolioGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal-overlay" id="videoModal" data-lenis-prevent>
+        <div class="modal-container" style="max-width: 600px;" data-lenis-prevent>
+            <div class="modal-header" style="border: none;">
+                <button class="modal-close" id="closeVideoBtn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body" style="padding-top: 0;" data-lenis-prevent>
+                <div class="video-wrapper">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Eidalux Brand Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Modal -->
+    <div class="modal-overlay" id="statsModal" data-lenis-prevent>
+        <div class="modal-container" data-lenis-prevent>
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i data-lucide="bar-chart-2" style="color: var(--clr-primary);"></i>
+                    <h2>Business Milestones & Stats</h2>
+                </div>
+                <button class="modal-close" id="closeStatsBtn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body" data-lenis-prevent>
+                <div class="stats-grid" id="modalStatsGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom Bar -->
+    <div class="sticky-bottom-bar">
+        <div class="sticky-bar-content">
+            <button class="sticky-btn" id="sticky-call">
+                <i data-lucide="phone"></i>
+                <span>Call</span>
+            </button>
+            <button class="sticky-btn whatsapp" id="sticky-whatsapp">
+                <i data-lucide="message-circle"></i>
+                <span>WhatsApp</span>
+            </button>
+            <button class="sticky-btn" id="sticky-save">
+                <i data-lucide="user-plus"></i>
+                <span>Save</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
