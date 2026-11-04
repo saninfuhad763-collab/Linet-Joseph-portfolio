@@ -21,8 +21,8 @@ const statsData = [
 
 // Configuration
 const config = {
-    whatsappNumber: "919447012345", // Replace with Linet Joseph's WhatsApp number
-    phone: "+91 94470 12345",
+    whatsappNumber: "918714046916", // Linet Joseph's WhatsApp number
+    phone: "+91 87140 46916",
     email: "linetjoseph@eidalux.com",
     website: "https://www.eidalux.com",
     instagram: "https://www.instagram.com/eidaluxmattress",
@@ -114,7 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearEl) yearEl.textContent = new Date().getFullYear();
     
     const phoneEl = document.getElementById('footerPhone');
-    if (phoneEl) phoneEl.textContent = config.phone;
+    if (phoneEl) {
+        phoneEl.textContent = config.phone;
+        if (phoneEl.tagName === 'A') {
+            phoneEl.href = `tel:${config.phone.replace(/\s/g,'')}`;
+        }
+    }
     
     initBannerSlider();
     initAIVoice();
