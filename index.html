@@ -399,20 +399,24 @@
 
     <!-- QR Code Modal -->
     <div class="modal-overlay" id="qrModal" data-lenis-prevent>
-        <div class="modal-container" style="max-width: 400px; text-align: center;" data-lenis-prevent>
+        <div class="modal-container qr-modal-container" data-lenis-prevent>
             <div class="modal-header" style="border: none; padding-bottom: 0;">
                 <h2 style="font-size: 1.25rem;">Scan to Connect</h2>
                 <button class="modal-close" id="closeQrBtn"><i data-lucide="x"></i></button>
             </div>
-            <div class="modal-body" style="align-items: center; padding-top: 0;" data-lenis-prevent>
-                <p style="color: var(--clr-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+            <div class="modal-body" style="align-items: center; padding-top: 0.5rem;" data-lenis-prevent>
+                <p style="color: var(--clr-text-muted); font-size: 0.88rem; margin-bottom: 1.15rem;">
                     Scan this QR code with your smartphone camera to instantly open Linet Joseph's digital profile.
                 </p>
-                <div style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: inline-block;">
-                    <img id="qrCodeImg" src="" alt="QR Code" style="width: 250px; height: 250px;">
+                <div class="qr-code-wrapper">
+                    <img id="qrCodeImg" src="images/qr_linet_joseph.png" alt="Linet Joseph Live Profile QR Code">
+                </div>
+                <div class="qr-target-url">
+                    <i data-lucide="globe"></i>
+                    <span>https://linet-joseph.vercel.app/</span>
                 </div>
                 <button class="btn btn-primary w-full mt-3" id="btn-share-qr">
-                    <i data-lucide="share"></i> Share QR Code
+                    <i data-lucide="share-2"></i> Share QR Code
                 </button>
             </div>
         </div>

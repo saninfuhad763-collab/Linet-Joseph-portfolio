@@ -31,7 +31,7 @@ const config = {
     youtube: "https://youtube.com",
     twitter: "https://twitter.com",
     location: "Kerala, India",
-    websiteUrl: window.location.href, // Deployed URL
+    websiteUrl: "https://linet-joseph.vercel.app/",
 };
 
 // Eidalux Collections & Products Data
@@ -452,8 +452,8 @@ function setupActions() {
     const qrModal = document.getElementById('qrModal');
     const openQr = () => {
         const qrImg = document.getElementById('qrCodeImg');
-        if (qrImg) {
-            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(config.websiteUrl)}&margin=10`;
+        if (qrImg && !qrImg.getAttribute('src')) {
+            qrImg.src = "images/qr_linet_joseph.png";
         }
         openModal(qrModal, "Opening QR Code");
     };
@@ -463,8 +463,7 @@ function setupActions() {
     
     document.getElementById('btn-share-qr')?.addEventListener('click', async () => {
         speakAction("Sharing QR Code");
-        const qrSrc = document.getElementById('qrCodeImg')?.src;
-        if (!qrSrc) return;
+        const qrSrc = document.getElementById('qrCodeImg')?.src || 'images/qr_linet_joseph.png';
         try {
             const response = await fetch(qrSrc);
             const blob = await response.blob();
@@ -473,14 +472,22 @@ function setupActions() {
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 await navigator.share({
                     title: 'Linet Joseph | Eidalux QR Code',
-                    text: 'Scan to connect with Linet Joseph (Eidalux Mattress)',
+                    text: 'Scan to open Linet Joseph\'s digital profile: https://linet-joseph.vercel.app/',
                     files: [file]
                 });
+            } else if (navigator.share) {
+                await navigator.share({
+                    title: 'Linet Joseph | Eidalux QR Code',
+                    text: 'Linet Joseph | Founder & Business Visionary Behind Eidalux',
+                    url: config.websiteUrl
+                });
             } else {
-                window.open(qrSrc, '_blank');
+                navigator.clipboard.writeText(config.websiteUrl).then(() => {
+                    alert('Profile link copied: ' + config.websiteUrl);
+                });
             }
         } catch (err) {
-            window.open(qrSrc, '_blank');
+            window.open(config.websiteUrl, '_blank');
         }
     });
     

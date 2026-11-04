@@ -684,6 +684,52 @@ html.modal-open, body.modal-open {
     touch-action: pan-y;
 }
 
+/* QR Code Modal Styling */
+.qr-modal-container {
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    background: #FFFFFF;
+}
+.qr-code-wrapper {
+    background: #FFFFFF;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #F3F4F6;
+    margin-bottom: 0.85rem;
+}
+.qr-code-wrapper img {
+    width: 230px;
+    height: 230px;
+    max-width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+.qr-target-url {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    color: var(--clr-primary);
+    font-weight: 700;
+    background: rgba(237, 3, 26, 0.08);
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    border: 1px solid rgba(237, 3, 26, 0.2);
+    margin-bottom: 0.5rem;
+    word-break: break-all;
+}
+.qr-target-url .lucide {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
 /* Horizontal Service Card */
 .service-card-hz {
     display: flex;
@@ -1477,6 +1523,10 @@ html.modal-open, body.modal-open {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
+    .qr-code-wrapper img {
+        width: 195px;
+        height: 195px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1498,6 +1548,10 @@ html.modal-open, body.modal-open {
     }
     .link-label {
         font-size: 0.72rem;
+    }
+    .qr-code-wrapper img {
+        width: 165px;
+        height: 165px;
     }
 }
 
