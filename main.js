@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     initLenis();
     setupActions();
-    initReferralSlipModal();
     initModalScrollProtection();
     
     if (typeof window !== 'undefined' && window.gsap && window.ScrollTrigger) {
@@ -569,131 +568,6 @@ function setupActions() {
     });
 }
 
-// Business Referral Slip Logic
-function initReferralSlipModal() {
-    const slipModal = document.getElementById('referralSlipModal');
-    const btnOpenSlip = document.getElementById('btn-open-referral-slip');
-    const closeSlipBtn = document.getElementById('closeReferralSlipBtn');
-
-    if (!slipModal) return;
-
-    const openSlip = () => {
-        openModal(slipModal, "Opening Referral Slip");
-    };
-
-    const closeSlip = () => {
-        closeModal(slipModal);
-    };
-
-    if (btnOpenSlip) btnOpenSlip.addEventListener('click', openSlip);
-    if (closeSlipBtn) closeSlipBtn.addEventListener('click', closeSlip);
-
-    // Live preview updater
-    const previewSummaryEl = document.getElementById('livePreviewSummary');
-    const updateLivePreview = () => {
-        if (!previewSummaryEl) return;
-        const clientName = document.getElementById('refClientName')?.value.trim();
-        const selectedServices = Array.from(document.querySelectorAll('#refServiceChips .ref-chip.active'))
-            .map(chip => chip.getAttribute('data-service'));
-        const serviceText = selectedServices.length > 0 ? selectedServices.join(', ') : 'Premium Mattress';
-        
-        const activeCard = document.querySelector('.ref-temp-cards .temp-card.active .temp-badge');
-        const tempBadgeText = activeCard ? activeCard.innerText : 'Hot Lead';
-        const tempClass = tempBadgeText.toLowerCase().includes('hot') ? 'text-hot' : '';
-
-        const clientDisplay = clientName ? `<strong>${clientName}</strong>` : 'Client';
-        previewSummaryEl.innerHTML = `${clientDisplay} • <strong>${serviceText}</strong> • <span class="${tempClass}">${tempBadgeText}</span>`;
-    };
-
-    document.getElementById('refClientName')?.addEventListener('input', updateLivePreview);
-
-    // Multi-select for service chips
-    const serviceChips = document.querySelectorAll('#refServiceChips .ref-chip');
-    serviceChips.forEach(chip => {
-        chip.addEventListener('click', () => {
-            chip.classList.toggle('active');
-            updateLivePreview();
-        });
-    });
-
-    // Temperature cards radio selection
-    const tempCards = document.querySelectorAll('.ref-temp-cards .temp-card');
-    tempCards.forEach(card => {
-        card.addEventListener('click', () => {
-            tempCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-            const radio = card.querySelector('input[type="radio"]');
-            if (radio) radio.checked = true;
-            updateLivePreview();
-        });
-    });
-
-    updateLivePreview();
-
-    // Helper to generate formatted text
-    const getReferralSlipData = () => {
-        const from = document.getElementById('refFrom')?.value.trim();
-        const chapter = document.getElementById('refChapter')?.value.trim();
-        const clientName = document.getElementById('refClientName')?.value.trim();
-        const clientPhone = document.getElementById('refClientPhone')?.value.trim();
-        const notes = document.getElementById('refNotes')?.value.trim();
-
-        if (!clientName || !clientPhone) {
-            alert('Please enter the Client Name and Contact Number.');
-            return null;
-        }
-
-        const selectedServices = Array.from(document.querySelectorAll('#refServiceChips .ref-chip.active'))
-            .map(chip => chip.getAttribute('data-service'));
-        const serviceText = selectedServices.length > 0 ? selectedServices.join(', ') : 'Eidalux Premium Sleep Solution';
-
-        const checkedRadio = document.querySelector('input[name="refTemp"]:checked');
-        const tempText = checkedRadio ? checkedRadio.value : '🔥 Hot';
-
-        const referrerDetails = from 
-            ? `${from}${chapter ? ' (' + chapter + ')' : ''}` 
-            : 'Business Associate / Referral Partner';
-
-        const message = 
-`📋 *EIDALUX BUSINESS REFERRAL SLIP*
-━━━━━━━━━━━━━━━━━━━━
-👤 *Given By:* ${referrerDetails}
-🎯 *Client / Lead:* ${clientName}
-📞 *Contact Number:* ${clientPhone}
-🛏️ *Requirement:* ${serviceText}
-🌡️ *Status:* ${tempText}
-${notes ? `📝 *Notes:* ${notes}\n` : ''}━━━━━━━━━━━━━━━━━━━━
-_Submitted for Linet Joseph • Founder & Visionary_
-_Eidalux Mattress • “Better sleep. Better comfort. Better living.”_`;
-
-        return message;
-    };
-
-    // Submit via WhatsApp
-    const btnSubmit = document.getElementById('btnSubmitReferralSlip');
-    if (btnSubmit) {
-        btnSubmit.addEventListener('click', () => {
-            const message = getReferralSlipData();
-            if (!message) return;
-            speakAction("Submitting referral slip to Linet Joseph");
-            openWhatsApp(message);
-            closeSlip();
-        });
-    }
-
-    // Copy Text
-    const btnCopy = document.getElementById('btnCopyReferralSlip');
-    if (btnCopy) {
-        btnCopy.addEventListener('click', () => {
-            const message = getReferralSlipData();
-            if (!message) return;
-            navigator.clipboard.writeText(message).then(() => {
-                alert('Referral Slip copied to clipboard! You can share it via WhatsApp or message.');
-            });
-        });
-    }
-}
-
 // Animations & Scrolling
 let lenisInstance = null;
 
@@ -719,7 +593,7 @@ function initModalScrollProtection() {
 
             // Find the active scrollable container in this modal
             const scrollable = overlay.querySelector(
-                '.referral-slip-body, .bio-journey-body, .portfolio-modal-body, .modal-body'
+                '.bio-journey-body, .portfolio-modal-body, .modal-body'
             );
 
             if (scrollable) {
@@ -747,7 +621,7 @@ function initModalScrollProtection() {
                 const deltaY = startY - currentY;
                 startY = currentY;
                 const scrollable = overlay.querySelector(
-                    '.referral-slip-body, .bio-journey-body, .portfolio-modal-body, .modal-body'
+                    '.bio-journey-body, .portfolio-modal-body, .modal-body'
                 );
                 if (scrollable) {
                     scrollable.scrollTop += deltaY;
