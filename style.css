@@ -188,7 +188,7 @@ h1, h2, h3 { font-family: var(--font-heading); }
 }
 
 .profile-banner {
-    height: 265px;
+    height: 235px;
     background: var(--clr-navy);
     position: relative;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
@@ -258,19 +258,21 @@ h1, h2, h3 { font-family: var(--font-heading); }
 }
 
 .profile-avatar {
-    width: 260px;
-    height: 260px;
+    width: 210px;
+    height: 210px;
     background: white;
     border-radius: 50%;
-    margin: -130px auto 1.25rem;
-    padding: 7px; /* Space for the double border */
+    margin: -105px auto 1.15rem;
+    padding: 0;
+    border: 5px solid white;
     /* Creative double ring border */
-    box-shadow: 0 0 0 4px white, 0 0 0 7px var(--clr-primary), 0 15px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 3px var(--clr-primary), 0 12px 28px rgba(0,0,0,0.18);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 5;
+    overflow: hidden;
     transition: transform 0.5s ease;
 }
 .profile-avatar .avatar-img {
@@ -285,11 +287,13 @@ h1, h2, h3 { font-family: var(--font-heading); }
     height: 100%;
     object-fit: cover;
     object-position: center top;
+    transform: scale(1.2);
+    transform-origin: center 8%;
     transition: transform 0.4s ease;
 }
 
 .profile-avatar:hover .avatar-img {
-    transform: scale(1.08);
+    transform: scale(1.26);
 }
 
 .profile-info {
@@ -1377,12 +1381,12 @@ html.modal-open, body.modal-open {
     }
     
     .profile-banner {
-        height: 255px;
+        height: 230px;
     }
     .profile-avatar {
-        width: 245px;
-        height: 245px;
-        margin: -122px auto 1.15rem;
+        width: 200px;
+        height: 200px;
+        margin: -100px auto 1.1rem;
     }
     
     .links-grid {
@@ -1392,12 +1396,12 @@ html.modal-open, body.modal-open {
 
 @media (max-width: 768px) {
     .profile-banner {
-        height: 245px;
+        height: 220px;
     }
     .profile-avatar {
-        width: 230px;
-        height: 230px;
-        margin: -115px auto 1rem;
+        width: 195px;
+        height: 195px;
+        margin: -98px auto 1rem;
     }
     .bni-footer .footer-content {
         flex-direction: column;
@@ -1416,12 +1420,12 @@ html.modal-open, body.modal-open {
 
 @media (max-width: 480px) {
     .profile-banner {
-        height: 225px;
+        height: 205px;
     }
     .profile-avatar {
-        width: 210px;
-        height: 210px;
-        margin: -105px auto 0.9rem;
+        width: 175px;
+        height: 175px;
+        margin: -88px auto 0.85rem;
     }
     .links-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1475,12 +1479,12 @@ html.modal-open, body.modal-open {
 
 @media (max-width: 360px) {
     .profile-banner {
-        height: 200px;
+        height: 190px;
     }
     .profile-avatar {
-        width: 185px;
-        height: 185px;
-        margin: -92px auto 0.8rem;
+        width: 155px;
+        height: 155px;
+        margin: -78px auto 0.75rem;
     }
 }
 
