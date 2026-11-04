@@ -365,12 +365,13 @@ function openWhatsApp(message) {
 }
 
 function shareProfile() {
-    const textMsg = `Connect with Linet Joseph - Founder & Business Visionary behind Eidalux Mattress:`;
+    const shareTitle = 'Linet Joseph | Founder & Business Visionary Behind Eidalux';
+    const textMsg = `Linet Joseph — Kerala Entrepreneur & Founder of Eidalux Mattress. “Better sleep. Better comfort. Better living.”`;
     if (navigator.share) {
-        navigator.share({ title: 'Linet Joseph | Eidalux Mattress', text: textMsg, url: config.websiteUrl })
-            .catch(() => fallbackShare(textMsg + " " + config.websiteUrl));
+        navigator.share({ title: shareTitle, text: textMsg, url: config.websiteUrl })
+            .catch(() => fallbackShare(textMsg + "\n" + config.websiteUrl));
     } else {
-        fallbackShare(textMsg + " " + config.websiteUrl);
+        fallbackShare(textMsg + "\n" + config.websiteUrl);
     }
 }
 
