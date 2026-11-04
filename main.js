@@ -74,15 +74,10 @@ const linksData = [
     { label: "WhatsApp", icon: "message-circle", color: "bg-green", action: () => { speakAction("Opening WhatsApp"); openWhatsApp("Hi Linet Joseph, I got your contact from your digital profile and would like to connect."); } },
     { label: "Email", icon: "mail", color: "bg-red", action: () => { speakAction("Sending Email"); window.open(`mailto:${config.email}?subject=Enquiry for Eidalux Mattresses`); } },
     { label: "Website", icon: "globe", color: "bg-blue", action: () => { speakAction("Opening Eidalux Website"); window.open(config.website, '_blank'); } },
-    
     { label: "Location", icon: "map-pin", color: "bg-red", action: () => { speakAction("Opening Location"); alert(`Location: ${config.location}`); } },
     { label: "Copy Link", icon: "copy", color: "bg-red", action: () => { speakAction("Link Copied"); shareProfile(); } },
-    { label: "Enquiry Form", icon: "file-text", color: "bg-green", action: () => { speakAction("Opening Enquiry"); openWhatsApp("Hi Linet Joseph, I would like to enquire about Eidalux mattress collections and pricing."); } },
-    { label: "Consultation", icon: "calendar", color: "bg-purple", action: () => { speakAction("Booking Sleep Consultation"); openWhatsApp("Hi Linet Joseph, I would like to book a personalized sleep and mattress consultation."); } },
-    
     { label: "Facebook", icon: "facebook", color: "bg-blue", action: () => { speakAction("Opening Facebook"); window.open(config.facebook, '_blank'); } },
-    { label: "Instagram", icon: "instagram", color: "bg-red", action: () => { speakAction("Opening Instagram"); window.open(config.instagram, '_blank'); } },
-    { label: "LinkedIn", icon: "linkedin", color: "bg-blue", action: () => { speakAction("Opening LinkedIn"); window.open(config.linkedin, '_blank'); } }
+    { label: "Instagram", icon: "instagram", color: "bg-red", action: () => { speakAction("Opening Instagram"); window.open(config.instagram, '_blank'); } }
 ];
 
 const connectorsData = [
@@ -426,11 +421,6 @@ function setupActions() {
         speakAction("Share profile");
         shareProfile();
     });
-
-    document.getElementById('btnRefer')?.addEventListener('click', () => {
-        speakAction("Refer client");
-        shareProfile();
-    });
     
     // Unified Modal Open & Close System
     window.openModal = function(modalEl, voiceText) {
@@ -514,7 +504,6 @@ function setupActions() {
     setupModal('btn-open-bio-journey', 'bioJourneyModal', 'closeBioJourneyBtn', "Viewing Biography and Entrepreneurial Journey");
     setupModal('btn-testimonials', 'testimonialsModal', 'closeTestimonialsBtn', "Viewing Client Reviews");
     setupModal('btn-portfolio', 'portfolioModal', 'closePortfolioBtn', "Viewing Mattress Showcase");
-    setupModal('btn-video', 'videoModal', 'closeVideoBtn', "Watching Brand Story");
     setupModal('btn-stats', 'statsModal', 'closeStatsBtn', "Viewing Business Stats");
     
     // Sticky Bottom Bar Actions
