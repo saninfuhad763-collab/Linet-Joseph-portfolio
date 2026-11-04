@@ -188,14 +188,14 @@ h1, h2, h3 { font-family: var(--font-heading); }
 }
 
 .profile-banner {
-    height: 215px;
+    height: 240px;
     background: var(--clr-navy);
     position: relative;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 1.15rem;
     overflow: hidden;
 }
 
@@ -258,11 +258,11 @@ h1, h2, h3 { font-family: var(--font-heading); }
 }
 
 .profile-avatar {
-    width: 205px;
-    height: 205px;
+    width: 230px;
+    height: 230px;
     background: white;
     border-radius: 50%;
-    margin: -100px auto 1rem;
+    margin: -115px auto 1.15rem;
     padding: 6px; /* Space for the double border */
     /* Creative double ring border */
     box-shadow: 0 0 0 4px white, 0 0 0 7px var(--clr-primary), 0 15px 30px rgba(0,0,0,0.2);
@@ -1368,6 +1368,14 @@ html.modal-open, body.modal-open {
 }
 
 @media (max-width: 768px) {
+    .profile-banner {
+        height: 220px;
+    }
+    .profile-avatar {
+        width: 205px;
+        height: 205px;
+        margin: -100px auto 1rem;
+    }
     .bni-footer .footer-content {
         flex-direction: column;
         align-items: flex-start;
@@ -1392,12 +1400,29 @@ html.modal-open, body.modal-open {
         max-width: 600px;
     }
     
+    .profile-banner {
+        height: 230px;
+    }
+    .profile-avatar {
+        width: 220px;
+        height: 220px;
+        margin: -110px auto 1rem;
+    }
+    
     .links-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 480px) {
+    .profile-banner {
+        height: 200px;
+    }
+    .profile-avatar {
+        width: 185px;
+        height: 185px;
+        margin: -92px auto 0.85rem;
+    }
     .links-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1445,6 +1470,17 @@ html.modal-open, body.modal-open {
     }
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 360px) {
+    .profile-banner {
+        height: 185px;
+    }
+    .profile-avatar {
+        width: 170px;
+        height: 170px;
+        margin: -85px auto 0.75rem;
     }
 }
 
